@@ -1,0 +1,47 @@
+/* index.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-container {
+    text-align: center;
+    margin: 20px 0;
+    margin-top: 150px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meeting-form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card {
+    text-align: center;
+}
+
+.success-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+}
