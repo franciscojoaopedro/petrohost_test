@@ -1,73 +1,83 @@
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background-color: #2c3e50;
+width: 100%;
+  background-color: #0284c7;
   color: white;
   border-radius: 16px 0px 16px 0px;
   padding: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  bottom: 0;
   
 `;
 
-const Section = styled.div`
-display: flex;
-flex-direction: column;
-
-`;
 
 
 
 
 const Container=styled.div`
+width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
+padding: 20px 0;
+gap: 10px;
 `
 const CopyrightText = styled.p`
+    text-align: center;
     font-size: 14px;
-    color: #666;
+    font-weight: 700;
+    color: #fff;
+`;
+const Logo = styled.img`
+  width: 180px;
+  height: auto;
+`;
+const Section = styled.div`
+display: flex;
+justify-content: center;
+align-items: start;
+text-align: justify;
+flex-direction: column;
+ul{
+    padding-left: 0;
+    margin-top: 0;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+h3 {
+    margin-bottom: 10px;
+}
+`;
+const SectionLogo = styled.div`
+width: 300px;
+text-align: justify;
+margin-bottom: 20px;
 `;
 
-const Title=styled.h3`
-text-align: start;
-`
-const ContainerTitle=styled.div`
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
-`
+
 export const Footer=()=> {
     return (
         <FooterContainer>
-
-<Container>
-            <Section>
-                <ContainerTitle>
-                <Title>Contato</Title>
-                </ContainerTitle>
-                <p>Email: comercial@petrohost.ao</p>
-                <p>Endereço: Av. Pedro de Castro Van - Dúnem Vila Ecompoce nº 76, Luanda, Angola</p>
-                <p>Telefone: +244 923 000 143</p>
-            </Section>
-            <Section>
-                <Title>Serviços Web</Title>
-                <ul style={{
-                    display:"flex",
-                    justifyContent:"flex-start",
-                    flexDirection:"column"
-                }}  >
+        <Container>
+        <SectionLogo>
+            <Logo src='https://www.petrohost.ao/resources/uploads/logo/2024-01-04/petrohost-hospedagem-de-sites-seu-negocio-na-internet-2.png' alt='Logo da sua empresa' />
+            <p>Email: comercial@petrohost.ao</p>
+            <p>Endereço: Av. Pedro de Castro Van - Dúnem Vila Ecompoce nº 76, Luanda, Angola</p>
+            <p>Telefone: +244 923 000 143</p>
+        </SectionLogo>
+        <Section>
+            <h3>Serviços Web</h3>
+                <ul >
                     <li>Registro de Domínio</li>
                     <li>Hospedagem de site compartilhada</li>
                     <li>Revenda de Hospedagem</li>
                     <li>Certificado SSL</li>
                 </ul>
-            </Section>
-            <Section>
-               
-                <Title>Domínios</Title>
+        </Section>
+        <Section>
+                <h3>Domínios</h3>
                 <ul>
                     <li>Registro de domínio .ao</li>
                     <li>Registro de domínio .co.ao</li>
@@ -77,15 +87,12 @@ export const Footer=()=> {
                     <li>Registro de domínio .org</li>
                 </ul>
             </Section>
-
-    
             <Section>
-                <Title>Links úteis & Suporte</Title>
+                <h3>Links úteis & Suporte</h3>
                 <ul>
                     <li>Criar Ticket</li>
                     <li>Telefones</li>
                 </ul>
-                
             </Section>
         </Container>
         <CopyrightText>
