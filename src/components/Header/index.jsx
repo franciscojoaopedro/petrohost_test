@@ -1,4 +1,6 @@
 import './header.css';
+import {FaUser,FaLock} from "react-icons/fa"
+import { CiLock } from "react-icons/ci";
 
 
 const UrlLogoTipo="https://www.petrohost.ao/resources/uploads/logo/2024-01-04/petrohost-hospedagem-de-sites-seu-negocio-na-internet.png"
@@ -11,14 +13,13 @@ export const Header=()=>{
             <nav>
                 <ul>
                     <li>
-                        <a href="#/">Portal do Cliente</a>
+                        <a href="#/"  style={{display:"flex",justifyContent:"center",alignItems:"center"}} >
+                            Portal do Cliente
+                            <CiLock size={24} style={{marginLeft:10}} />
+                        </a>
+                       
                     </li>
-                    <li>
-                        <a href="#sobre">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="#contato">Contato</a>
-                    </li>
+                    
                 </ul>
             </nav>
         </header>
