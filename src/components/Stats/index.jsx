@@ -38,7 +38,7 @@ function Stats() {
       {stats.map((stat, index) => (
         <div key={index}>
           <div>
-            <stat.icon  color='#2563eb' size={30} />
+            <stat.icon  color='#1e569d' size={30} />
           </div>
           <Stat>{stat.value}</Stat>
           <Label>{stat.label}</Label>

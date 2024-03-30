@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 const FooterContainer = styled.footer`
 width: 100%;
   background-color: #0284c7;
@@ -56,6 +56,13 @@ text-align: justify;
 margin-bottom: 20px;
 `;
 
+const SocialMediaContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; 
+`;
+
 
 export const Footer=()=> {
     return (
@@ -95,6 +102,11 @@ export const Footer=()=> {
                 </ul>
             </Section>
         </Container>
+        <SocialMediaContainer>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF  size={24} color="#fff" /></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={24} color="#fff" /></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={24} color="#fff" /></a>
+        </SocialMediaContainer>
         <CopyrightText>
             Copyright © 2015- 2024 Todos os direitos reservados PETROHOST, LDA | NIF 5000962961
         </CopyrightText>
