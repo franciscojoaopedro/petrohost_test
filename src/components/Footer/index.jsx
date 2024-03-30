@@ -105,7 +105,7 @@ export const Footer=()=> {
         <SocialMediaContainer>
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF  size={24} color="#fff" /></a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={24} color="#fff" /></a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={24} color="#fff" /></a>
+                <a href="https://www.linkedin.com/company/apetrohost/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={24} color="#fff" /></a>
         </SocialMediaContainer>
         <CopyrightText>
             Copyright © 2015- 2024 Todos os direitos reservados PETROHOST, LDA | NIF 5000962961
