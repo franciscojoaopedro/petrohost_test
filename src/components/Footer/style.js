@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { THEMES } from '../../themes/themes';
 export const FooterContainer = styled.footer`
-width: 100%;
+  width: 100%;
   background-color: ${THEMES.colors.principal};
   color: white;
   border-radius: 16px 0px 16px 0px;

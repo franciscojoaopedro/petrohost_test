@@ -13,9 +13,13 @@ export const HomePage = () => {
         setShowSuccessModal(true);
     };
 
+    const LogoAzulUrl="https://www.petrohost.ao/resources/uploads/logo/2024-01-04/petrohost-hospedagem-de-sites-seu-negocio-na-internet.png"
+
     return (
         <div className='container'>
             <div>
+                {/*
+
                 <div className='info-container'>
                     <h2>Escolhe o seu pacote de Hospedagem</h2>
                     <p>Pacotes de hospedagem com recursos para suportar qualquer tipo de website</p>
@@ -25,13 +29,14 @@ export const HomePage = () => {
                     <CardInfo/>
                     <CardInfo/>
                 </div>
+    */}
             </div>
              
                 <div className='meeting-form-container'>
                 <ImageContainer>
                 <ContentContainer>
-                    <img src={logoBranco} width={100} />
-                  <h2>Precisando de Suporte?</h2> 
+                    <img src={LogoAzulUrl} width={180}  />
+                  <h2   style={{display:"flex", justifyContent:"flex-end"}} >Precisando de Suporte?</h2> 
                   <p>Estamos disponivel 24/24 Via Chat, E-mail.</p>
                 </ContentContainer>
                 
@@ -46,7 +51,6 @@ export const HomePage = () => {
                     )}
                 
             </div>
-            <Stats/>
         </div>
     );
 };

@@ -1,39 +1,35 @@
 import styled from 'styled-components';
-
+import {THEMES} from "../../themes/themes"
+import Baner from "../../assets/baner_2.png"
 export const ImageContainer = styled.div`
   width: 100%;
   max-width: 800px;
   height: 500px;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  background: url("public/baner_one.jpg");
+  justify-content: start; 
+  align-items: flex-end; 
+  background: url(${Baner});
   background-clip: content-box;
  background-size: cover;
  background-repeat: no-repeat;
-  background-position: center;
+background-position: 120px;
  z-index: -1;
  position: relative;
 
-&::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3); 
-  z-index: -1;
-}
+
+
 `;
 
 
 export const ContentContainer = styled.div`
+margin-left: 10px;
+position: absolute;
 display: flex;
-justify-content: start;
+justify-content: flex-start;
 align-items: start;
 flex-direction: column;
-  z-index: 2;
-  text-align: center;
-  color: white; 
+color: ${THEMES.colors.principal}; 
+
+
+
 `;
