@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {THEMES} from "../../themes/themes"
-import Baner from "../../assets/baner_2.png"
+import Baner from "../../assets/banerOriginal.png"
 export const ImageContainer = styled.div`
   width: 100%;
   max-width: 800px;

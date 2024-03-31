@@ -9,6 +9,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   bottom: 0;
+  color: ${THEMES.colors.secundaria};
   
 `;
 
@@ -28,7 +29,7 @@ export const CopyrightText = styled.p`
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    color: #fff;
+    color: ${THEMES.colors.principal};
 `;
 export const Logo = styled.img`
   width: 180px;

@@ -7,11 +7,13 @@ function App() {
   
 
   return (
+    <>
+    <Header/>
     <div className='Container'>
-      <Header/>
         <HomePage/>
       <Footer/>
     </div>
+    </>
   )
 }
 

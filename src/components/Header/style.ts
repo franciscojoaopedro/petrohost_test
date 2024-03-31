@@ -1,13 +1,18 @@
 import { THEMES } from './../../themes/themes';
 import styled from 'styled-components';
 export const HeaderContainer = styled.header`
+
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #003366; 
+  background-color:${THEMES.colors.principal}; 
   padding: 10px;
   flex-direction: column;
-  
+  margin: 0;
+  box-shadow: 0.6px 0.9px 2px rgba(0,0,0,0.5);
+  border-radius: 0px 0px 8px 8px ;
+
   `;
 
 export const Logo = styled.img`

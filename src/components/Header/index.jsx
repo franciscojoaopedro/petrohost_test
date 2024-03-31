@@ -4,7 +4,7 @@ import {HeaderContainer,Logo,Nav,NavItem,NavLink,NavList,
 import { FaWordpress, FaEnvelope, FaGlobe, FaNetworkWired,FaServer } from "react-icons/fa";
 import { CiLock,CiMail,CiPhone } from "react-icons/ci";
 
-const UrlLogoTipo = "https://www.petrohost.ao/resources/uploads/logo/2024-01-04/petrohost-hospedagem-de-sites-seu-negocio-na-internet.png";
+const UrlLogoTipo = "https://www.petrohost.ao/resources/uploads/logo/2024-01-04/petrohost-hospedagem-de-sites-seu-negocio-na-internet-2.png";
 
 
 export const Header = () => {
