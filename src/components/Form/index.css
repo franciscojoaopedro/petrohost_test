@@ -2,12 +2,12 @@ form {
     width: 100%;
     max-width: 400px;
     height: 490px;
-    
     border-radius: 10px; 
     padding: 20px; 
     box-sizing: border-box; 
     background: transparent;
     box-shadow: 0.5px 4px 4px 0.5px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 .container {
     display: flex;
@@ -133,7 +133,6 @@ input[type="time"]:focus {
 /* Estilização do overlay e modal */
 .modal-overlay {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,11 +144,11 @@ input[type="time"]:focus {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1001;
+    z-index: 1500;
     
     height: 600px;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 .modal-content {
@@ -175,7 +174,7 @@ input[type="time"]:focus {
 .flex-button{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
 }
@@ -204,6 +203,9 @@ button[type="button"] {
 
 button[type="submit"]:hover {
     background-color: #45a049;
+}
+.invisbleButtonVoltar{
+    visibility: hidden;
 }
 .success-modal {
     width: 200px;

@@ -26,10 +26,11 @@
 
 .meeting-form-container {
     width: 100%;
-    max-height:600px ;
+    height: 652px;
+    max-height:900px ;
     padding: 0px 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     background: transparent;
     gap: 10px;

@@ -7,9 +7,9 @@ export const FooterContainer = styled.footer`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  left: 0;
   bottom: 0;
   color: ${THEMES.colors.secundaria};
-  
 `;
 
 

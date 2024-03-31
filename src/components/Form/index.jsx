@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import "./index.css"
+import { THEMES } from '../../themes/themes';
 
 const MeetingForm = ({ onSubmit }) => {
     const [formValue,setFormValue]=useState({
@@ -13,30 +14,38 @@ const MeetingForm = ({ onSubmit }) => {
         endereco:""
     })
     const [currentStep, setCurrentStep] = useState(1);
-
+    const [invisible,setInvisible]=useState("")
     const nextStep = () => {
         if(currentStep==1){
             if(formValue.servicos=="" || undefined)return
             if(formValue.endereco==""|| undefined)return
             if(formValue.funcionario==""|| undefined)return
             setCurrentStep(currentStep + 1);
+            setInvisible("")
         }
         if(currentStep==2){
             if(formValue.data==""|| undefined)return
             if(formValue.hora==""|| undefined)return
             setCurrentStep(currentStep + 1);
+            setInvisible("")
         }
         if(currentStep==3){
             if(formValue.nome==""|| undefined)return
             if(formValue.email==""|| undefined)return
             if(formValue.telefone==""|| undefined)return
+            
             setCurrentStep(currentStep + 1);
+            setInvisible("invisbleButtonVoltar")
+
+
         }
         return
     };
     const prevStep = () => {
         setCurrentStep(currentStep - 1);
     };
+
+
 
 
     const listaDeServicos = [
@@ -74,7 +83,6 @@ const MeetingForm = ({ onSubmit }) => {
             case 1:
                 return (
                   <>
-                  
             <div className="form-group"> 
                 <label>Serviços</label>
                 <select name='servicos' value={formValue.servicos}
@@ -173,7 +181,7 @@ const MeetingForm = ({ onSubmit }) => {
                 return (
                     <div className="modal-overlay">
                     <div className="modal">
-                        <h3>Confirmação</h3>
+                        <h3 style={{color:`${THEMES.colors.principal}`}} >Confirmação</h3>
                         <div className="modal-content">
                             <div className="summary-item">
                                 <strong>Nome:</strong> {formValue.nome}
@@ -202,7 +210,6 @@ const MeetingForm = ({ onSubmit }) => {
                         </div>
 
                         <div className='flex-button'>
-                        <button type="button" onClick={prevStep}>Editar</button>
                         <button type="submit" onClick={handleSubmit} >Confirmar</button>
                         </div>
                     </div>
@@ -311,14 +318,13 @@ const MeetingForm = ({ onSubmit }) => {
         </div>
         {renderStep()}
 
-                {currentStep > 1 && (
-                    <button type="button" onClick={prevStep}>Voltar</button>
-                )}
-                {currentStep < 4 ? (
-                    <button type="button" onClick={nextStep}>Próximo</button>
-                ) : (
-                    <button type="submit" onClick={() => onSubmit(formValue)}>Enviar</button>
-                )}
+                {
+                    currentStep >1&&<button   className={invisible} type="button" onClick={prevStep}>Voltar</button>
+                }
+                
+                {
+                currentStep < 4 &&<button type="button" onClick={nextStep}>Próximo</button>
+                }
         </form>
         </>
     );

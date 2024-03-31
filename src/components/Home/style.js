@@ -3,8 +3,8 @@ import {THEMES} from "../../themes/themes"
 import Baner from "../../assets/banerOriginal.png"
 export const ImageContainer = styled.div`
   width: 100%;
-  max-width: 800px;
-  height: 500px;
+  height: 700px;
+  max-width: 1000px;
   display: flex;
   justify-content: start; 
   align-items: flex-end; 
@@ -12,7 +12,7 @@ export const ImageContainer = styled.div`
   background-clip: content-box;
  background-size: cover;
  background-repeat: no-repeat;
-background-position: 120px;
+background-position: 90px;
  z-index: -1;
  position: relative;
 
@@ -29,7 +29,6 @@ justify-content: flex-start;
 align-items: start;
 flex-direction: column;
 color: ${THEMES.colors.principal}; 
-
-
+margin-bottom: 54px;
 
 `;
