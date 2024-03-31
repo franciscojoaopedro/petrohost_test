@@ -4,7 +4,7 @@ import CardInfo from '../Cards';
 import MeetingForm from '../Form';
 import Stats from '../Stats';
 import { ImageContainer ,ContentContainer} from './style'; 
-
+import logoBranco from "../../assets/logo_white.png"
 export const HomePage = () => {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
 
@@ -30,7 +30,7 @@ export const HomePage = () => {
                 <div className='meeting-form-container'>
                 <ImageContainer>
                 <ContentContainer>
-                    <img src='public/logo_white.png' width={100} />
+                    <img src={logoBranco} width={100} />
                   <h2>Precisando de Suporte?</h2> 
                   <p>Estamos disponivel 24/24 Via Chat, E-mail.</p>
                 </ContentContainer>
