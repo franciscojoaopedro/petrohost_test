@@ -52,13 +52,6 @@ export const Footer=()=> {
                     <li>Registro de domínio .org</li>
                 </ul>
             </Section>
-            <Section>
-                <h3>Links úteis & Suporte</h3>
-                <ul>
-                    <li>Criar Ticket</li>
-                    <li>Telefones</li>
-                </ul>
-            </Section>
         </Container>
         <SocialMediaContainer>
                 <a href="https://web.facebook.com/petrohost?_rdc=1&_rdr" target="_blank" rel="noopener noreferrer"><FaFacebookF  size={24} color="#fff" /></a>

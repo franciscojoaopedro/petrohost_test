@@ -28,7 +28,8 @@ export const CopyrightText = styled.p`
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    color: ${THEMES.colors.principal};
+    color: ${THEMES.colors.branco};
+    margin-top: 10px;
 `;
 export const Logo = styled.img`
   width: 180px;
