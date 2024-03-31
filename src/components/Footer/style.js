@@ -4,7 +4,6 @@ export const FooterContainer = styled.footer`
   width: 100%;
   background-color: ${THEMES.colors.principal};
   color: white;
-  border-radius: 16px 0px 16px 0px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -55,6 +54,9 @@ export const SectionLogo = styled.div`
 width: 300px;
 text-align: justify;
 margin-bottom: 20px;
+p{
+  margin-top: 10px;
+}
 `;
 
 export const SocialMediaContainer = styled.div`
