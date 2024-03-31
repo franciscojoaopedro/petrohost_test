@@ -3,7 +3,7 @@ import './index.css';
 import CardInfo from '../Cards';
 import MeetingForm from '../Form';
 import Stats from '../Stats';
-
+import { ImageContainer ,ContentContainer} from './style'; 
 
 export const HomePage = () => {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -26,13 +26,17 @@ export const HomePage = () => {
                     <CardInfo/>
                 </div>
             </div>
-            <div className='container2'>    
+             
                 <div className='meeting-form-container'>
-                    <div className="card">
-                        <h2>Petrohost - Soluções web e profissionais</h2>
-                        <p>PETROHOST, é uma provedora de hospedagem de sites com a missão de promover o crescimento digital em Angola a todos que querem criar a sua identidade online, oferecemos um suporte profissional 24/7 todos os dias.</p>
-                        <a href="#">Saiba mais</a>
-                    </div>
+                <ImageContainer>
+                <ContentContainer>
+                    <img src='public/logo_white.png' width={100} />
+                  <h2>Precisando de Suporte?</h2> 
+                  <p>Estamos disponivel 24/24 Via Chat, E-mail.</p>
+                </ContentContainer>
+                
+                </ImageContainer>
+               
                     <MeetingForm onSubmit={handleMeetingFormSubmit} />
                     {showSuccessModal && (
                         <div className="success-modal"> 
@@ -40,7 +44,7 @@ export const HomePage = () => {
                             <button onClick={() => setShowSuccessModal(false)}>Fechar</button>
                         </div>
                     )}
-                </div>
+                
             </div>
             <Stats/>
         </div>
