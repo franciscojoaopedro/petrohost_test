@@ -283,6 +283,7 @@ const MeetingForm = ({ onSubmit }) => {
             })
            onSubmit(formValue);
 
+
            function apagarCampos(){
             formValue.nome=""
             formValue.email=""
@@ -293,8 +294,12 @@ const MeetingForm = ({ onSubmit }) => {
             formValue.hora=""
             formValue.endereco=""
            }
-           apagarCampos()
-          
+           setTimeout(()=>{
+               apagarCampos()
+               
+              setCurrentStep(1)
+
+           },1000)
         } 
     
 
