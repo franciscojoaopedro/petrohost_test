@@ -4,12 +4,13 @@ import CardInfo from '../Cards';
 import MeetingForm from '../Form';
 import Stats from '../Stats';
 import { ImageContainer ,ContentContainer} from './style'; 
-import logoBranco from "../../assets/logo_white.png"
 export const HomePage = () => {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
 
     const handleMeetingFormSubmit = (event) => {
+      if(typeof event==HTMLFormElement){
         event.preventDefault();
+      }
         setShowSuccessModal(true);
     };
 
@@ -18,18 +19,6 @@ export const HomePage = () => {
     return (
         <div className='container'>
             <div>
-                {/*
-
-                <div className='info-container'>
-                    <h2>Escolhe o seu pacote de Hospedagem</h2>
-                    <p>Pacotes de hospedagem com recursos para suportar qualquer tipo de website</p>
-                </div>
-                <div className='cards-container'>
-                    <CardInfo/>
-                    <CardInfo/>
-                    <CardInfo/>
-                </div>
-    */}
             </div>
              
                 <div className='meeting-form-container'>

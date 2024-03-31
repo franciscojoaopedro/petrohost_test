@@ -44,6 +44,27 @@ form {
     width: 100%;
     margin-bottom: 5px;
 }
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    border-color: #007bff;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
 button[type="submit"] {
     background-color: #2cd59f;
     color: white;
@@ -53,6 +74,132 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+}
+
+
+
+
+input[type="date"],
+input[type="time"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="date"]:hover,
+input[type="time"]:hover {
+    border-color: #007bff;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
+
+/* Estilização do container de resumo */
+.summary-container {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.summary-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.summary-item {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-item strong {
+    margin-right: 10px;
+}
+
+/* Estilização do overlay e modal */
+.modal-overlay {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    
+    height: 600px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.modal-content {
+    margin-bottom: 20px;
+}
+
+.modal h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.summary-item strong {
+    margin-right: 10px;
+}
+
+.flex-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    margin-right: 10px;
 }
 
 button[type="submit"]:hover {
