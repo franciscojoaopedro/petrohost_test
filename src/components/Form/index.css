@@ -1,3 +1,4 @@
+
 form {
     width: 100%;
     max-width: 400px;
@@ -8,6 +9,7 @@ form {
     background: transparent;
     box-shadow: 0.5px 4px 4px 0.5px rgba(0, 0, 0, 0.5);
     position: relative;
+    border-top: 3px solid #1e569d;
 }
 .container {
     display: flex;
