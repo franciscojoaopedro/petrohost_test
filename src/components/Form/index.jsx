@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import "./index.css"
 import { THEMES } from '../../themes/themes';
 
+
 const MeetingForm = ({ onSubmit }) => {
     const [formValue,setFormValue]=useState({
         nome:"",
@@ -301,6 +302,8 @@ const MeetingForm = ({ onSubmit }) => {
             formValue.hora=""
             formValue.endereco=""
            }
+
+           
            setTimeout(()=>{
                apagarCampos()
                

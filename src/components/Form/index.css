@@ -234,7 +234,7 @@ button[type="submit"]:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #f4f4f4;
-    border: 2px solid #4CAF50;
+    border: 2px solid #1e569d;
     padding: 20px;
     z-index: 1000;
 }

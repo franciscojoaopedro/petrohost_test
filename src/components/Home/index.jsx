@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import './index.css';
-import CardInfo from '../Cards';
 import MeetingForm from '../Form';
-import Stats from '../Stats';
 import { ImageContainer ,ContentContainer} from './style'; 
 export const HomePage = () => {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
