@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import "./index.css"
 import { THEMES } from '../../themes/themes';
+import { API } from '../../api/api';
 
 
 const MeetingForm = ({ onSubmit }) => {
@@ -8,7 +9,7 @@ const MeetingForm = ({ onSubmit }) => {
         nome:"",
         telefone:"",
         email:"",
-        servicos:"",
+        servicos:[],
         data: "",
         hora: "",
         funcionario:"",
@@ -83,17 +84,19 @@ const MeetingForm = ({ onSubmit }) => {
         switch (currentStep) {
             case 1:
                 return (
-                  <>
+            <>
             <div className="form-group"> 
                 <label>Serviços</label>
-                <select name='servicos' value={formValue.servicos}
+                <select  key={listaDeFuncionarios.map((i,index)=>index)} name='servicos' value={formValue.servicos}
+                    
                 onChange={(e) => setFormValue((prevStat)=>({
                     ...prevStat,
-                    servicos:e.target.value
-                }))} 
+                    servicos:[...prevStat.servicos,e.target.value],
+                }))
+            } 
                 >
-                {listaDeServicos.map(servico => (<option key={servico} value={servico}>{servico}</option>))}
-                        
+                {listaDeServicos.map(servico => (<option  selected  key={servico} value={servico}  >{servico}</option>))}
+                
                 </select>
             </div>
             <div className="form-group"> 
@@ -265,7 +268,7 @@ const MeetingForm = ({ onSubmit }) => {
 
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit =  async (e) => {
         e.preventDefault();
         if(formValue.nome==""|| undefined ||
         formValue.data==""|| undefined
@@ -289,8 +292,20 @@ const MeetingForm = ({ onSubmit }) => {
                 hora:formValue.hora,
                 endereco:formValue.endereco,
             })
+            const data={
+                nome:formValue.nome,
+                email:formValue.email,
+                telefone:formValue.telefone,
+                servicos:formValue.servicos,
+                funcionario:formValue.funcionario,
+                data: formValue.data,
+                hora:formValue.hora,
+                endereco:formValue.endereco,
+            }
            onSubmit(formValue);
 
+            await API.post("/agenda/agendar",data)
+            .then(()=>alert('Agenda criada'))
 
            function apagarCampos(){
             formValue.nome=""
