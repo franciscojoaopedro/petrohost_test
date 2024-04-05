@@ -4,9 +4,9 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
-
-gap: 10px;
-margin-top: 5px;
+padding: 0px 10px;
+gap: 0px 10px;
+margin-top: 10px;
 position: relative;
 `;
 
@@ -36,9 +36,11 @@ export const UserHeading = styled.div`
 
 `;
 
-export const AgendaList = styled.ul`
-  list-style: none;
-  padding: 0;
+export const AgendaList = styled.div`
+width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 `;
 
 export const AgendaItem = styled.li`
@@ -91,5 +93,30 @@ border-collapse: collapse;
 thead{
   width: 100%;
 }
+
+
+ 
+thead {
+    background-color: #1e569d; 
+    color: white; 
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd; 
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+
+  tbody tr:hover {
+    background-color: #ddd; 
+  }
+
+  td {
+    border: 1px solid #1e569d; 
+  }
 
 `
