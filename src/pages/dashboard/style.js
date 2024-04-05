@@ -24,6 +24,7 @@ export const UserHeading = styled.div`
   margin-bottom: 10px;
   height: 40px;
   border-radius: 8px;
+  gap: 10px;
 
 
 
@@ -98,13 +99,14 @@ thead{
  
 thead {
     background-color: #1e569d; 
-    color: white; 
+    color: white;
   }
-
+  
   th, td {
     padding: 8px;
     text-align: left;
     border: 1px solid #ddd; 
+    font-weight: 400;
   }
 
   tbody tr:nth-child(odd) {

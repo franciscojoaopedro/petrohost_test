@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import {AgendaItem,AgendaList,DashboardContainer,UserHeading,UserInfo,UserAside, ContainerAgendas, ContainerTable} from "./style"
 import { Header } from '../../components/Header';
 import { CiMail,CiUser } from "react-icons/ci";
+import { IoMdNotifications } from "react-icons/io";
+
 import { API } from '../../api/api';
 
 
@@ -145,7 +147,10 @@ export const Dashboard = () => {
     
     <ContainerAgendas>
 
-        <UserHeading>Agendas Marcadas </UserHeading>
+        <UserHeading>Agendas Marcadas
+        <IoMdNotifications  color='#ef4444' size={24} />
+       <span style={{fontWeight:500}}>{dados.length}</span>
+        </UserHeading>
         <AgendaList>
           <ContainerTable border={1}  >
               <thead>
