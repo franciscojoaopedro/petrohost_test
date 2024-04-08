@@ -96,8 +96,9 @@ thead{
 }
 
 
- 
+
 thead {
+  border-radius: 8px;
     background-color: #1e569d; 
     color: white;
   }
